@@ -1,0 +1,23 @@
+.nav-item1{
+    padding-left:850px;
+    /* margin-top: 100px; */
+  }
+  
+  /* .nav-item2{
+    padding-left: 0px;
+  
+  } */
+  /* .nav-item3{
+    padding-left:920px;
+    margin-top: -40px;
+   
+  } */
+ 
+  .home{
+    background-image: url(https://cdn.pixabay.com/photo/2020/08/09/14/25/business-5475660__340.jpg);
+    background-size:cover;
+    border: 2px solid rgb(163, 134, 134);
+    height: 625px;
+    width: 1366px;
+    /* display: flex; */
+  }

@@ -1,0 +1,14 @@
+.wlcm{
+    background-image: url(https://cdn.pixabay.com/photo/2018/03/04/09/48/space-3197606__340.jpg);
+background-size:cover;
+border: 2px solid rgb(163, 134, 134);
+height: 625px;
+width: 1366px;
+/* display: flex; */
+background-repeat: repeat;
+position: absolute;
+overflow-x: scroll;
+}
+.cd{
+    margin-top:110px;
+}

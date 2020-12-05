@@ -1,0 +1,8 @@
+.wlcme{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3TkzWy-D-sG07TJliUSWqE4sFfUowMZ9Y5g&usqp=CAU);
+    background-size:cover;
+    border: 2px solid rgb(163, 134, 134);
+    height: 625px;
+    width: 1366px;
+    /* display: flex; */
+  }
