@@ -34,7 +34,7 @@ class ListStockComponent extends Component {
     }
 
     addStock(){
-        this.props.history.push('/add-stock/${stockId}');
+        this.props.history.push('/add-stock');
     }
 
     render() {

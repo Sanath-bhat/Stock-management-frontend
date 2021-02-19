@@ -46,7 +46,7 @@ componentDidMount(){
       // console.log(res.data);
         this.state.a = (res.data);
         // console.log(a[1].email);
-        console.log(this.state.a);
+        // console.log(this.state.a);
         
       
   });
@@ -91,16 +91,16 @@ checkRole=(e)=>{
 
          this.message="Logined successfully";
          console.log(this.message);
-        // localStorage.setItem('admindetails',JSON.stringify(this.user[i]))
+         localStorage.setItem('admindetails',JSON.stringify(this.state.a[i]))
          this.props.history.push("/investor/welcome")
     }
-     if(this.state.a[i].role=="Manager")
+    else if(this.state.a[i].role=="Manager")
     {
 
     console.log("sanath");
        this.message="Logined successfully";
        console.log(this.message);
-      // localStorage.setItem('admindetails',JSON.stringify(this.user[i]))
+       localStorage.setItem('admindetails',JSON.stringify(this.state.a[i]))
        this.props.history.push("/manager/welcome")
   }
     else{

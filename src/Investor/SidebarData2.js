@@ -1,5 +1,6 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
+import * as BsIcons from 'react-icons/bs';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
@@ -13,9 +14,9 @@ export const SidebarData2 = [
     cName: 'nav-text'
   },
   {
-    title: 'View Stocks',
+    title: 'Stocks',
     path: '/investor/view',
-    icon: <RiIcons.RiAdminFill />,
+    icon: <BsIcons.BsBag />,
     cName: 'nav-text'
   },
   {
@@ -23,13 +24,14 @@ export const SidebarData2 = [
     path: '/getmystocks',
     icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
+  },
+  
+  {
+    title: 'Update profile',
+    path: `/update-profile/`,
+    icon: <BiIcons.BiBuildings />,
+    cName: 'nav-text'
   }
-  // {
-  //   title: 'Companies',
-  //   path: '/companies',
-  //   icon: <BiIcons.BiBuildings />,
-  //   cName: 'nav-text'
-  // },
   // {
   //   title: 'Investor',
   //   path: '/investor',

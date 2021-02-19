@@ -19,22 +19,25 @@ class CreateStockComponent extends Component {
         this.saveOrUpdateStock = this.saveOrUpdateStock.bind(this);
     }
 
-    // step 3
-    componentDidMount(){
 
-        // step 4
-        if(this.state.id === '_add'){
-            return
-        }else{
-            StockService.getStockById(this.state.id).then( (res) =>{
-                let stock = res.data;
-                this.setState({stockItem: stock.stockItem,
-                    stockType: stock.stockType,
-                    stockPrice : stock.stockPrice
-                });
-            });
-        }        
-    }
+    
+
+    // step 3
+    // componentDidMount(){
+
+    //     // step 4
+    //     // if(this.state.id === '_add'){
+    //     //     return
+    //     // }else{
+    //         StockService.getStockById(this.state.id).then( (res) =>{
+    //             let stock = res.data;
+    //             this.setState({stockItem: stock.stockItem,
+    //                 stockType: stock.stockType,
+    //                 stockPrice : stock.stockPrice
+    //             });
+    //         });
+    //     // }        
+    // }
     saveOrUpdateStock = (e) => {
         e.preventDefault();
         let stock = {stockItem: this.state.stockItem, stockType: this.state.stockType, stockPrice: this.state.stockPrice};
@@ -42,9 +45,9 @@ class CreateStockComponent extends Component {
 
         // step 5
         // if(this.state.id === '_add'){
-        //     StockService.createStock(stock).then(res =>{
-        //         this.props.history.push('/getstock');
-        //     });
+            StockService.createStock(stock).then(res =>{
+                this.props.history.push('/getstock');
+             });
         // }else{
         //     StockService.updateStock(stock, this.state.id).then( res => {
         //         this.props.history.push('/getstock');
@@ -68,13 +71,13 @@ class CreateStockComponent extends Component {
         this.props.history.push('/getstock');
     }
 
-    getTitle(){
-        if(this.state.id === '_add'){
-            return <h3 className="text-center">Add Stock</h3>
-        }else{
-            return <h3 className="text-center">Update Stock</h3>
-        }
-    }
+    // getTitle(){
+    //     if(this.state.id === '_add'){
+    //         return <h3 className="text-center">Add Stock</h3>
+    //     }else{
+    //         return <h3 className="text-center">Update Stock</h3>
+    //     }
+    // }
     render() {
         return (
             <div className="wlcm">
@@ -82,9 +85,10 @@ class CreateStockComponent extends Component {
                    <div className = "container">
                         <div className = "row">
                             <div className = "card col-md-6 offset-md-3 offset-md-3">
-                                {
+                                {/* {
                                     this.getTitle()
-                                }
+                                } */}
+                                 <h3 className="text-center">Add Manager</h3>
                                 <div className = "card-body">
                                     <form>
                                         <div className = "form-group">

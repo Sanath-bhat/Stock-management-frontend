@@ -15,15 +15,15 @@ export const SidebarData1 = [
   {
     title: 'Manage Stocks',
     path: '/getstock',
-    icon: <RiIcons.RiAdminFill />,
+    icon: <FaIcons.FaShoppingCart />,
     cName: 'nav-text'
   },
-  // {
-  //   title: 'Manage Company Manager',
-  //   path: '/getmanager',
-  //   icon: <FaIcons.FaCartPlus />,
-  //   cName: 'nav-text'
-  // }
+  {
+    title: 'Change password',
+    path: '/change-password',
+    icon: <FaIcons.FaCartPlus />,
+    cName: 'nav-text'
+  }
   // {
   //   title: 'Companies',
   //   path: '/companies',

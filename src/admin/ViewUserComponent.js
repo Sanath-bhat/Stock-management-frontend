@@ -40,7 +40,7 @@ class ViewUserComponent extends Component {
         return (
             <div className="viewstock">
                 <Navbar/>
-                 <h2 className="text-center">Users</h2>
+                 <h2 className="text-center">Investors</h2>
                  <div class="col-md-8 offset-2 mt-4 card card-body"> 
                  {/* <div className = "row">
                     <button className="btn btn-primary" onClick={this.addUser}> Add User</button>

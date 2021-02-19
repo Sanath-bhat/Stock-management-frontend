@@ -7,9 +7,19 @@ class UpdateUserComponent extends Component {
 
         this.state = {
             userId: this.props.match.params.userId,
+            fname: '',
+            lname: '',
+            phoneno: '',
+            email:'',
+            password:'',
             ilimit:''
            
         }
+        this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
+        this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
+        this.changePhoneNoHandler = this.changePhoneNoHandler.bind(this);
+        this.changeEmailHandler = this.changeEmailHandler.bind(this);
+        this.changePasswordHandler = this.changePasswordHandler.bind(this);
         this.changeLimitHandler = this.changeLimitHandler.bind(this);
         this.updateUser = this.updateUser.bind(this);
     }
@@ -17,18 +27,42 @@ class UpdateUserComponent extends Component {
     componentDidMount(){
         UserService.getByUser(this.state.userId).then( (res) =>{
             let user = res.data;
-            this.setState({ilimit: user.ilimit});
+            this.setState({userId: user.userId,
+                fname: user.fname,
+                lname: user.lname,
+                phoneno: user.phoneno,
+                email: user.email,
+                password:user.password,ilimit: user.ilimit});
         });
     }
 
     updateUser = (e) => {
         e.preventDefault();
-        let user = {ilimit: this.state.ilimit};
+        let user = {fname: this.state.fname, lname: this.state.lname, phoneno: this.state.phoneno, email: this.state.email,password: this.state.password,ilimit: this.state.ilimit};
         console.log('user => ' + JSON.stringify(user));
         console.log('userId => ' + JSON.stringify(this.state.userId));
         UserService.updateUser(user, this.state.userId).then( res => {
             this.props.history.push('../admin/users');
         });
+    }
+    changeFirstNameHandler= (event) => {
+        this.setState({fname: event.target.value});
+    }
+    
+    changeLastNameHandler= (event) => {
+        this.setState({lname: event.target.value});
+    }
+    
+    changePhoneNoHandler= (event) => {
+        this.setState({phoneno: event.target.value});
+    }
+    
+     changeEmailHandler= (event) => {
+        this.setState({email: event.target.value});
+    }
+    
+     changePasswordHandler= (event) => {
+        this.setState({password: event.target.value});
     }
     
     changeLimitHandler= (event) => {
@@ -49,6 +83,31 @@ class UpdateUserComponent extends Component {
                                 <h3 className="text-center">Add Investor Limit</h3>
                                 <div className = "card-body">
                                 <form>
+                                <div className = "form-group">
+                                            {/* <label> First Name: </label> */}
+                                            <input type ="hidden"placeholder="First Name" name="fname" className="form-control" 
+                                                value={this.state.fname} onChange={this.changeFirstNameHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            {/* <label> Last Name: </label> */}
+                                            <input type ="hidden" placeholder="Last Name" name="lname" className="form-control" 
+                                                value={this.state.lname} onChange={this.changeLastNameHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            {/* <label>Phone No:</label> */}
+                                            <input type ="hidden"placeholder="Phone No" name="phoneno" className="form-control" 
+                                                value={this.state.phoneno} onChange={this.changePhoneNoHandler}/>
+                                        </div>
+                                         <div className = "form-group">
+                                            {/* <label>Email Id:</label> */}
+                                            <input type="hidden" placeholder="Email Id" name="emailId" className="form-control" 
+                                                value={this.state.email} onChange={this.changeEmailHandler}/>
+                                        </div>
+                                         <div className = "form-group">
+                                            {/* <label>Password:</label> */}
+                                            <input type ="hidden" placeholder="password" name="password" className="form-control" 
+                                                value={this.state.password} onChange={this.changePasswordHandler}/>
+                                        </div>
                                         <div className = "form-group">
                                             <label>Investor Limit:</label>
                                             <input placeholder="Investor Limit" name="investorLimit" className="form-control" 

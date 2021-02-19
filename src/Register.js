@@ -60,7 +60,7 @@ class Register extends Component {
         let name =event.target.name;
         let value = event.target.value;
         let errors = this.state.errors;
-        let role = this.state.role;
+        // let role = this.state.role;
     
     switch(name){
       

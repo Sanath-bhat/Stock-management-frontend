@@ -1,7 +1,10 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
+import * as FcIcons from 'react-icons/fc';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+import * as ImIcons from 'react-icons/im';
+
+// import * as IoIcons from 'react-icons/io';
 import * as RiIcons from 'react-icons/ri';
 import * as BiIcons from 'react-icons/bi';
 
@@ -13,21 +16,23 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Manage Company',
+    title: 'Company',
     path: '/getcompany',
-    icon: <RiIcons.RiAdminFill />,
+    icon: <FaIcons.FaBuilding />,
     cName: 'nav-text'
   },
+  
   {
-    title: 'Manage Company Manager',
+    title: 'Manager',
     path: '/getmanager',
-    icon: <FaIcons.FaCartPlus />,
+    icon: <FcIcons.FcManager />,
     cName: 'nav-text'
+    
   },
   {
     title: 'Users',
     path: '/admin/users',
-    icon: <BiIcons.BiBuildings />,
+    icon: <ImIcons.ImUsers />,
     cName: 'nav-text'
   }
   // {

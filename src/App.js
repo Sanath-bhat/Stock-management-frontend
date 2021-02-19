@@ -30,6 +30,8 @@ import WelcomeInvestor from './Investor/WelcomeInvestor';
 import ViewStockComponent from './Investor/ViewStockComponent';
 import UpdateUserComponent from './admin/UpdateUserComponent';
 import MyStockComponent from './Investor/MyStockComponent';
+import UpdateProfile from './Investor/UpdateProfile';
+import ChangePassword from './Manager/ChangePassword';
 
 function App() {
   return (
@@ -53,12 +55,16 @@ function App() {
                <Route path ="/login" component={Login}/>
                <Route path ="/register" component={Register}/>
 
+               <Route path ="/change-password" component={ChangePassword}/>
+
                <Route path = "/getcompany" component = {ListCompanyComponent}></Route>
                <Route path = "/add-company" component = {CreateCompanyComponent}></Route>
 
                <Route path ="/getstock" component={ListStockComponent}></Route>
-               <Route path = "/add-stock/:stockId" component = {CreateStockComponent}></Route>
+               <Route path = "/add-stock" component = {CreateStockComponent}></Route>
                <Route path = "/update-stock/:stockId" component = {UpdateStockComponent}></Route>
+
+               <Route path = "/update-profile/" component = {UpdateProfile}></Route>
                
                <Route path = "/managerlogin" component = {ManagerLogin}></Route>
                <Route path = "/update-company/:companyId" component = {UpdateCompanyComponent}></Route>
@@ -68,18 +74,7 @@ function App() {
 
                <Route path = "/update-user1/:userId" component = {UpdateUserComponent}></Route>              
                </Switch>
-              
-                {/* <div className="container"> */}
-                {/* <Home/> */}
-                    {/* <Switch>  */}
-                          {/* <Route path = "/" exact component = {ListEmployeeComponent}></Route>
-                          <Route path = "/employees" component = {ListEmployeeComponent}></Route>
-                          <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
-                          <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route> */}
-                          {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
-                    {/* </Switch> */}
-                {/* </div> 
-              {/* <FooterComponent /> */}
+            
         </Router>
     </div>
     
